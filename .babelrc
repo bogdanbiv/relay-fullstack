@@ -13,6 +13,11 @@
             "transform": "react-transform-catch-errors",
             "imports": ["react", "redbox-react"]
           }]
+        }],
+        "transform-flow-strip-types",
+        ["transform-runtime", {
+          "polyfill": false,
+          "regenerator": true
         }]
       ]
     }

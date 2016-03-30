@@ -23,7 +23,8 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.jsx?$/,
-      loader: 'babel-loader',
+      //loader: 'babel-loader',
+      loaders: ['babel', 'flowcheck'],
       exclude: /node_modules/
     }, {
       test: /\.scss$/,
@@ -48,4 +49,3 @@ module.exports = {
     })
   ]
 };
-
