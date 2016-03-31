@@ -1,5 +1,10 @@
 'use strict';
 
+// @flow
+(1 + 1: string); // Error: Numbers are not strings
+("foo": boolean); // OK: Strings are strings
+("Hello, World": string); // OK: Strings are strings
+
 var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');

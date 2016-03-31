@@ -1,0 +1,45 @@
+[ignore]
+node_modules/.*
+.*/node_modules/.*
+.*/bin/.*
+.*/build/.*
+.*/dist/.*
+.*/docs/.*
+.*/features/.*
+.*/server/.*
+
+# directories
+
+#files
+*.bak
+
+[include]
+client/**/*.js
+server/**/*.js
+\./*.js
+
+[libs]
+.*/decls/.*
+
+[options]
+module.system=haste
+munge_underscores=true
+
+esproposal.class_static_fields=enable
+esproposal.export_star_as=enable
+esproposal.class_instance_fields=enable
+
+module.name_mapper='.*\(.scss\)' -> 'empty/object'
+module.name_mapper='^config$'->'<PROJECT_ROOT>/src/config/index.js'
+module.name_mapper='^locale\/\(.*\)$' -> '<PROJECT_ROOT>/../\1'
+
+suppress_type=$FlowIssue
+suppress_type=$FlowFixMe
+suppress_type=$FixMe
+
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe\\($\\|[^(]\\|(\\(>=0\\.\\(2[0-1]\\|1[0-9]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*\\)?)\\)
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssue\\((\\(>=0\\.\\(2[0-1]\\|1[0-9]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*\\)?)\\)? #[0-9]+
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixedInNextDeploy
+
+[version]
+0.22.1
